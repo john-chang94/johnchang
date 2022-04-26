@@ -1,15 +1,157 @@
+:root {
+  --colorPrimary: #d2dbe9;
+  --colorSecondary: #6e7c8d;
+  --colorAction: #244a86;
+  --colorText: #f0f3f5;
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.5;
 }
 
 #root {
-  height: 100vh;
+  background: linear-gradient(180deg, rgba(240,243,245,1) 0%, rgba(228,228,228,1) 37%, rgb(202, 213, 232) 100%);
 }
 
 .App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
+}
+
+ul {
+  position: fixed;
+  list-style-type: none;
+  width: 100%;
+  background-color: var(--colorSecondary);
+  color: var(--colorText);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ul li {
+  padding: 15px 25px 15px 25px;
+}
+ul li:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#hero {
+  text-align: center;
+  padding-top: 350px;
+  padding-bottom: 350px;
+}
+#hero p {
+  font-size: calc(14px + 3vmin);
+}
+#about {
+  text-align: center;
+  height: 1300px;
+}
+.project-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.project-img {
+  max-width: 350px;
+}
+#contact {
+  text-align: center;
+  padding-top: 250px;
+  padding-bottom: 250px;
+}
+
+.text-title {
+  font-size: 2rem;
+}
+.text-subtitle {
+  font-size: 1.8rem;
+  /* font-family: 'Nanum Gothic', sans-serif; */
+}
+.text-regular {
+  font-size: 1.2rem;
+}
+.text-center {
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+}
+.l1 {
+  grid-column: span 1;
+}
+.l2 {
+  grid-column: span 2;
+}
+.l3 {
+  grid-column: span 3;
+}
+.l4 {
+  grid-column: span 4;
+}
+.l5 {
+  grid-column: span 5;
+}
+.l6 {
+  grid-column: span 6;
+}
+.l7 {
+  grid-column: span 7;
+}
+.l8 {
+  grid-column: span 8;
+}
+.l9 {
+  grid-column: span 9;
+}
+.l10 {
+  grid-column: span 10;
+}
+.l11 {
+  grid-column: span 11;
+}
+.l12 {
+  grid-column: span 12;
+}
+.l2-offset-1 {
+  grid-column: 2 / span 2;
+}
+.l2-offset-3 {
+  grid-column: 4 / span 2;
+}
+.l2-offset-5 {
+  grid-column: 6 / span 2;
+}
+.l3-offset-2 {
+  grid-column: 3 / span 3;
+}
+.l3-offset-3 {
+  grid-column: 4 / span 3;
+}
+.l3-offset-5 {
+  grid-column: 6 / span 3;
+}
+.l3-offset-6 {
+  grid-column: 7 / span 3;
+}
+.l3-offset-7 {
+  grid-column: 8 / span 3;
+}
+.l4-offset-2 {
+  grid-column: 3 / span 4;
+}
+.l6-offset-3 {
+  grid-column: 4 / span 6;
+}
+.l6-offset-4 {
+  grid-column: 5 / span 4;
+}
+.l7-offset-3 {
+  grid-column: 4 / span 7;
+}
+.l8-offset-2 {
+  grid-column: 3 / span 8;
 }
