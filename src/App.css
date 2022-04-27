@@ -47,16 +47,21 @@ ul li:hover {
 }
 #about {
   text-align: center;
-  height: 700px;
+  padding-top: 350px;
+  padding-bottom: 350px;
+}
+#technologies {
+  text-align: center;
+  padding-top: 350px;
+  padding-bottom: 350px;
+}
+#projects {
+  padding-top: 100px;
 }
 .project-section {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-.project-info {
-  background-color: white;
-  padding: 10px;
-  border-radius: 10px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  border-bottom: 1px solid rgb(227, 227, 227);
 }
 .project-info p {
   text-align: center;
@@ -64,18 +69,54 @@ ul li:hover {
 .project-img {
   width: 100%;
 }
+.project-two-mockup {
+  box-shadow: 8px 15px 20px rgb(77, 77, 77);
+}
+.tech-logos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.tech-logos img {
+  max-width: 100px;
+}
+.tech-logos span {
+  display: flex;
+  align-items: center;
+}
+.tech-logos span img {
+  max-height: 33px;
+}
+.project-actions {
+  display: flex;
+  justify-content: space-around;
+}
+.project-actions button {
+  padding: 7px 25px 7px 25px;
+  border-radius: 10px;
+  border: 1px solid rgb(226, 226, 226);
+  font-size: 1rem;
+}
 #contact {
   text-align: center;
   padding-top: 250px;
   padding-bottom: 250px;
 }
 
+.pointer {
+  cursor: pointer;
+}
+.hovered:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.bg-white {
+  background-color: white;
+}
 .text-title {
   font-size: 2rem;
 }
 .text-subtitle {
   font-size: 1.8rem;
-  /* font-family: 'Nanum Gothic', sans-serif; */
 }
 .text-regular {
   font-size: 1.2rem;
@@ -154,8 +195,17 @@ ul li:hover {
 .l4-offset-2 {
   grid-column: 3 / span 4;
 }
+.l4-offset-7 {
+  grid-column: 8 / span 4;
+}
+.l4-offset-8 {
+  grid-column: 9 / span 4;
+}
 .l5-offset-1 {
   grid-column: 2 / span 5;
+}
+.l5-offset-2 {
+  grid-column: 3 / span 5;
 }
 .l5-offset-4 {
   grid-column: 5 / span 5;
