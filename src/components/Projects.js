@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import quickSchedulesMockup from "../images/mockup-quick-schedules.png";
-import monchMockup from "../images/mockup-monch.png";
-import monchMockupTablet from "../images/mockup-monch-ipad.png";
-import cryptoNetMockup from "../images/mockup-cryptonet.png";
+import monchMockupIpad from "../images/mockup-monch-ipad.png";
+import monchMockupIphone from "../images/mockup-monch-iphone.png";
+import cryptoNetMockup from "../images/mockup-cryptonet-ipad-iphone.png";
 import reactLogo from "../images/full-logo-react.png";
 import nodeLogo from "../images/full-logo-node.png";
 import expressLogo from "../images/full-logo-express.png";
@@ -18,15 +18,19 @@ export const Projects = () => {
   const [showSectionOne, setShowSectionOne] = useState(false);
   const [showSectionTwo, setShowSectionTwo] = useState(false);
   const [showSectionThree, setShowSectionThree] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const modalRef = useRef();
 
   const QuickSchedules = () => (
     <div className="project-section grid bg-white">
       <div className="project-info l4-offset-2">
-        <p className="text-subtitle">Quick Schedules</p>
-        <p className="text-regular">
-          Employee management system with exclusive administrative and employee
-          privileges.
-        </p>
+        <>
+          <p className="text-subtitle">Quick Schedules</p>
+          <p className="text-regular">
+            Employee management system with exclusive administrative and
+            employee privileges.
+          </p>
+        </>
         <div className="tech-logos">
           <img src={reactLogo} alt="react logo" />
           <img src={nodeLogo} alt="node logo" />
@@ -34,9 +38,16 @@ export const Projects = () => {
           <img src={postgresLogo} alt="postgres logo" />
         </div>
         <div className="project-actions">
-          <button disabled>Live site</button>
-          <button className="pointer hovered">Github</button>
+          <button disabled>Website</button>
+          <a
+            href="https://github.com/john-chang94/quick-schedules"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="pointer hovered">Github</button>
+          </a>
         </div>
+        <div className="video-container text-center">video here</div>
       </div>
       <div className="l5-offset-6">
         <img
@@ -50,18 +61,25 @@ export const Projects = () => {
 
   const Monch = () => (
     <div className="project-section grid bg-white">
-      <div className="l5-offset-2">
+      <div className="l5-offset-2 relative">
         <img
-          src={monchMockupTablet}
-          className="project-img project-two-mockup"
+          src={monchMockupIpad}
+          className="project-img monch-ipad"
+          alt="project monch mockup"
+        />
+        <img
+          src={monchMockupIphone}
+          className="project-img monch-iphone"
           alt="project monch mockup"
         />
       </div>
       <div className="project-info l4-offset-7">
-        <p className="text-subtitle">Monch!</p>
-        <p className="text-regular">
-          Search for restaurants, read reviews, and submit your own!
-        </p>
+        <div>
+          <p className="text-subtitle">Monch!</p>
+          <p className="text-regular">
+            Search for restaurants, read reviews, and submit your own!
+          </p>
+        </div>
         <div className="tech-logos">
           <img src={reactLogo} alt="react logo" />
           <img src={firebaseLogo} alt="firebase logo" />
@@ -73,9 +91,22 @@ export const Projects = () => {
           </span>
         </div>
         <div className="project-actions">
-          <button className="pointer hovered">Live site</button>
-          <button className="pointer hovered">Github</button>
+          <a
+            href="https://monch-8142.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="pointer hovered">Website</button>
+          </a>
+          <a
+            href="https://github.com/john-chang94/monch"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="pointer hovered">Github</button>
+          </a>
         </div>
+        <div className="video-container text-center">video here</div>
       </div>
     </div>
   );
@@ -83,12 +114,14 @@ export const Projects = () => {
   const CryptoNet = () => (
     <div className="project-section grid bg-white">
       <div className="project-info l4-offset-2">
-        <p className="text-subtitle">CryptoNet</p>
-        <p className="text-regular">
-          Cryptocurrency price tracker. View global market capitalization,
-          trading volume, and more. Utilized Coinranking API and Livecoinwatch
-          API.
-        </p>
+        <>
+          <p className="text-subtitle">CryptoNet</p>
+          <p className="text-regular">
+            Cryptocurrency price tracker. View global market capitalization,
+            trading volume, and more. Utilized Coinranking API and Livecoinwatch
+            API.
+          </p>
+        </>
         <div className="tech-logos">
           <img src={reactLogo} alt="react logo" />
           <span>
@@ -100,18 +133,56 @@ export const Projects = () => {
           <img src={chartLogo} alt="chart js logo" />
         </div>
         <div className="project-actions">
-          <button className="pointer hovered">Live site</button>
-          <button className="pointer hovered">Github</button>
+          <a
+            href="https://cryptonet-367.netlify.app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="pointer hovered">Website</button>
+          </a>
+          <a
+            href="https://github.com/john-chang94/cryptonet"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="pointer hovered">Github</button>
+          </a>
         </div>
+        <div className="video-container text-center">video here</div>
       </div>
       <div className="l5-offset-6">
         <img
           src={cryptoNetMockup}
-          className="project-img"
+          className="project-img cryptonet-mockup"
           alt="project cryptonet mockup"
         />
       </div>
     </div>
+  );
+
+  const Modal = () => (
+    <CSSTransition
+      in={showModal}
+      timeout={300}
+      classNames="modal"
+      unmountOnExit
+      nodeRef={modalRef}
+    >
+      <div ref={modalRef}>
+        <div
+          className="modal-container"
+          onClick={() => setShowModal(false)}
+        ></div>
+        <div className="modal">
+          <div onClick={() => setShowModal(false)}>
+            <i className="fas fa-times" />
+          </div>
+          <div className="video">
+            <p>data loaded</p>
+          </div>
+        </div>
+      </div>
+    </CSSTransition>
   );
 
   // const handleSetYAxis = () => {

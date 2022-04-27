@@ -29,6 +29,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 ul li {
   padding: 15px 25px 15px 25px;
@@ -43,7 +44,7 @@ ul li:hover {
   padding-bottom: 350px;
 }
 #hero p {
-  font-size: calc(14px + 3vmin);
+  font-size: calc(10px + 3vmin);
 }
 #about {
   text-align: center;
@@ -63,14 +64,31 @@ ul li:hover {
   padding-bottom: 150px;
   border-bottom: 1px solid rgb(227, 227, 227);
 }
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .project-info p {
   text-align: center;
+}
+.project-info div {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .project-img {
   width: 100%;
 }
-.project-two-mockup {
-  box-shadow: 8px 15px 20px rgb(77, 77, 77);
+.monch-iphone {
+  position: absolute;
+  max-width: 550px;
+  right: 0;
+  margin-top: -80px;
+  margin-right: -20px;
+}
+.cryptonet-mockup {
+  max-width: 600px;
+  margin-left: 10%;
 }
 .tech-logos {
   display: flex;
@@ -89,7 +107,7 @@ ul li:hover {
 }
 .project-actions {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .project-actions button {
   padding: 7px 25px 7px 25px;
@@ -97,12 +115,56 @@ ul li:hover {
   border: 1px solid rgb(226, 226, 226);
   font-size: 1rem;
 }
+.modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.4);
+}
+.modal {
+  position: absolute;
+  /* margin-top: 1rem; */
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 50%;
+  padding: 25px 0;
+  background-color: rgb(240, 240, 240);
+}
+.modal-enter {
+  opacity: 0;
+}
+.modal-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.modal-exit {
+  opacity: 1;
+}
+.modal-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
 #contact {
   text-align: center;
   padding-top: 250px;
   padding-bottom: 250px;
 }
 
+
+.relative {
+  position: relative;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
 .pointer {
   cursor: pointer;
 }
@@ -188,6 +250,9 @@ ul li:hover {
 }
 .l3-offset-7 {
   grid-column: 8 / span 3;
+}
+.l3-offset-8 {
+  grid-column: 9 / span 3;
 }
 .l4-offset-1 {
   grid-column: 2 / span 4;
