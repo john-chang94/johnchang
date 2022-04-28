@@ -73,21 +73,21 @@ ul li:hover {
   text-align: center;
 }
 .project-info div {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .project-img {
   width: 100%;
 }
 .monch-iphone {
   position: absolute;
-  max-width: 550px;
+  max-width: 70%;
   right: 0;
   margin-top: -80px;
   margin-right: -20px;
 }
 .cryptonet-mockup {
-  max-width: 600px;
+  width: 80%;
   margin-left: 10%;
 }
 .tech-logos {
@@ -96,7 +96,7 @@ ul li:hover {
   align-items: center;
 }
 .tech-logos img {
-  max-width: 100px;
+  max-width: 110px;
 }
 .tech-logos span {
   display: flex;
@@ -295,4 +295,164 @@ ul li:hover {
 }
 .l8-offset-2 {
   grid-column: 3 / span 8;
+}
+
+@media (max-width: 1300px) {
+  .m1 {
+    grid-column: span 1;
+  }
+  .m2 {
+    grid-column: span 2;
+  }
+  .m3 {
+    grid-column: span 3;
+  }
+  .m4 {
+    grid-column: span 4;
+  }
+  .m5 {
+    grid-column: span 5;
+  }
+  .m6 {
+    grid-column: span 6;
+  }
+  .m7 {
+    grid-column: span 7;
+  }
+  .m8 {
+    grid-column: span 8;
+  }
+  .m9 {
+    grid-column: span 9;
+  }
+  .m10 {
+    grid-column: span 10;
+  }
+  .m11 {
+    grid-column: span 11;
+  }
+  .m12 {
+    grid-column: span 12;
+  }
+  .m2-offset-2 {
+    grid-column: 3 / span 2;
+  }
+  .m5-offset-1 {
+    grid-column: 2 / span 5;
+  }
+  .m5-offset-7 {
+    grid-column: 8 / span 5;
+  }
+  .m6-offset-6 {
+    grid-column: 7 / span 6;
+  }
+  .m8-offset-2 {
+    grid-column: 3 / span 8;
+  }
+  .cryptonet-mockup {
+    margin-left: 0;
+  }
+  .qs-mockup {
+    margin-left: -5%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .s1 {
+    grid-column: span 1;
+  }
+  .s2 {
+    grid-column: span 2;
+  }
+  .s3 {
+    grid-column: span 3;
+  }
+  .s4 {
+    grid-column: span 4;
+  }
+  .s5 {
+    grid-column: span 5;
+  }
+  .s6 {
+    grid-column: span 6;
+  }
+  .s7 {
+    grid-column: span 7;
+  }
+  .s8 {
+    grid-column: span 8;
+  }
+  .s9 {
+    grid-column: span 9;
+  }
+  .s10 {
+    grid-column: span 10;
+  }
+  .s11 {
+    grid-column: span 11;
+  }
+  .s12 {
+    grid-column: span 12;
+  }
+  .s4-offset-2 {
+    grid-column: 3 / span 4;
+  }
+  .s10-offset-1 {
+    grid-column: 2 / span 10;
+  }
+}
+
+@media (max-width: 550px) {
+  .xs1 {
+    grid-column: span 1;
+  }
+  .xs2 {
+    grid-column: span 2;
+  }
+  .xs3 {
+    grid-column: span 3;
+  }
+  .xs4 {
+    grid-column: span 4;
+  }
+  .xs5 {
+    grid-column: span 5;
+  }
+  .xs6 {
+    grid-column: span 6;
+  }
+  .xs7 {
+    grid-column: span 7;
+  }
+  .xs8 {
+    grid-column: span 8;
+  }
+  .xs9 {
+    grid-column: span 9;
+  }
+  .xs10 {
+    grid-column: span 10;
+  }
+  .xs11 {
+    grid-column: span 11;
+  }
+  .xs12 {
+    grid-column: span 12;
+  }
+  .xs5-offset-1 {
+    grid-column: 2 / span 5;
+  }
+  .xs10-offset-1 {
+    grid-column: 2 / span 10;
+  }
+  .tech-logos {
+    flex-direction: column;
+  }
+  .qs-mockup {
+    margin-left: 0;
+  }
+  .cryptonet-mockup {
+    width: 100%;
+    margin-left: 0;
+  }
 }

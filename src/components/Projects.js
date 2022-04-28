@@ -3,13 +3,16 @@ import { CSSTransition } from "react-transition-group";
 import quickSchedulesMockup from "../images/mockup-quick-schedules.png";
 import monchMockupIpad from "../images/mockup-monch-ipad.png";
 import monchMockupIphone from "../images/mockup-monch-iphone.png";
+import monchMockup from "../images/mockup-monch.png";
 import cryptoNetMockup from "../images/mockup-cryptonet-ipad-iphone.png";
 import reactLogo from "../images/full-logo-react.png";
+import reactTransitionGroupLogo from "../images/full-logo-react-transition-group.png";
 import nodeLogo from "../images/full-logo-node.png";
 import expressLogo from "../images/full-logo-express.png";
 import postgresLogo from "../images/full-logo-postgresql.png";
 import firebaseLogo from "../images/full-logo-firebase.png";
 import chartLogo from "../images/full-logo-chartjs.png";
+import antdLogo from "../images/full-logo-antdesign.png";
 import antdSimpleLogo from "../images/logo-antdesign.png";
 import reactSimpleLogo from "../images/logo-react.png";
 
@@ -23,7 +26,7 @@ export const Projects = () => {
 
   const QuickSchedules = () => (
     <div className="project-section grid bg-white">
-      <div className="project-info l4-offset-2">
+      <div className="project-info xs12 m5-offset-1 l4-offset-2">
         <>
           <p className="text-subtitle">Quick Schedules</p>
           <p className="text-regular">
@@ -46,13 +49,13 @@ export const Projects = () => {
           >
             <button className="pointer hovered">Github</button>
           </a>
+          <button className="pointer hovered">Watch Demo</button>
         </div>
-        <div className="video-container text-center">video here</div>
       </div>
-      <div className="l5-offset-6">
+      <div className="xs12 m5-offset-7 l5-offset-6">
         <img
           src={quickSchedulesMockup}
-          className="project-img"
+          className="project-img qs-mockup"
           alt="project quick schedules mockup"
         />
       </div>
@@ -61,19 +64,14 @@ export const Projects = () => {
 
   const Monch = () => (
     <div className="project-section grid bg-white">
-      <div className="l5-offset-2 relative">
+      <div className="xs12 m5-offset-1 l5-offset-2 relative">
         <img
-          src={monchMockupIpad}
-          className="project-img monch-ipad"
-          alt="project monch mockup"
-        />
-        <img
-          src={monchMockupIphone}
-          className="project-img monch-iphone"
+          src={monchMockup}
+          className="project-img"
           alt="project monch mockup"
         />
       </div>
-      <div className="project-info l4-offset-7">
+      <div className="project-info xs12 l4-offset-7">
         <div>
           <p className="text-subtitle">Monch!</p>
           <p className="text-regular">
@@ -83,12 +81,10 @@ export const Projects = () => {
         <div className="tech-logos">
           <img src={reactLogo} alt="react logo" />
           <img src={firebaseLogo} alt="firebase logo" />
-          <span>
-            <img src={reactSimpleLogo} alt="react simple logo" />
-            <p>
-              <strong>&nbsp;React Transition Group</strong>
-            </p>
-          </span>
+          <img
+            src={reactTransitionGroupLogo}
+            alt="react transition group logo"
+          />
         </div>
         <div className="project-actions">
           <a
@@ -105,15 +101,15 @@ export const Projects = () => {
           >
             <button className="pointer hovered">Github</button>
           </a>
+          <button className="pointer hovered">Watch Demo</button>
         </div>
-        <div className="video-container text-center">video here</div>
       </div>
     </div>
   );
 
   const CryptoNet = () => (
     <div className="project-section grid bg-white">
-      <div className="project-info l4-offset-2">
+      <div className="project-info xs12 m5-offset-1 l4-offset-2">
         <>
           <p className="text-subtitle">CryptoNet</p>
           <p className="text-regular">
@@ -124,12 +120,7 @@ export const Projects = () => {
         </>
         <div className="tech-logos">
           <img src={reactLogo} alt="react logo" />
-          <span>
-            <img src={antdSimpleLogo} alt="ant design simple logo" />
-            <p>
-              <strong>&nbsp;ANT DESIGN</strong>
-            </p>
-          </span>
+          <img src={antdLogo} alt="ant design logo" />
           <img src={chartLogo} alt="chart js logo" />
         </div>
         <div className="project-actions">
@@ -147,10 +138,10 @@ export const Projects = () => {
           >
             <button className="pointer hovered">Github</button>
           </a>
+          <button className="pointer hovered">Watch Demo</button>
         </div>
-        <div className="video-container text-center">video here</div>
       </div>
-      <div className="l5-offset-6">
+      <div className="xs12 m5-offset-7 l5-offset-6">
         <img
           src={cryptoNetMockup}
           className="project-img cryptonet-mockup"
