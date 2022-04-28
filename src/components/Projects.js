@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import quickSchedulesMockup from "../images/mockup-quick-schedules.png";
-import monchMockupIpad from "../images/mockup-monch-ipad.png";
-import monchMockupIphone from "../images/mockup-monch-iphone.png";
 import monchMockup from "../images/mockup-monch.png";
 import cryptoNetMockup from "../images/mockup-cryptonet-ipad-iphone.png";
 import reactLogo from "../images/full-logo-react.png";
@@ -13,8 +11,6 @@ import postgresLogo from "../images/full-logo-postgresql.png";
 import firebaseLogo from "../images/full-logo-firebase.png";
 import chartLogo from "../images/full-logo-chartjs.png";
 import antdLogo from "../images/full-logo-antdesign.png";
-import antdSimpleLogo from "../images/logo-antdesign.png";
-import reactSimpleLogo from "../images/logo-react.png";
 
 export const Projects = () => {
   const [yAxis, setYAxis] = useState(window.scrollY);
@@ -26,9 +22,11 @@ export const Projects = () => {
 
   const QuickSchedules = () => (
     <div className="project-section grid bg-white">
-      <div className="project-info xs12 m5-offset-1 l4-offset-2">
+      <div className="project-info s12 m5-offset-1 l4-offset-2">
         <>
-          <p className="text-subtitle">Quick Schedules</p>
+          <p className="text-subtitle">
+            <strong>Quick Schedules</strong>
+          </p>
           <p className="text-regular">
             Employee management system with exclusive administrative and
             employee privileges.
@@ -41,7 +39,10 @@ export const Projects = () => {
           <img src={postgresLogo} alt="postgres logo" />
         </div>
         <div className="project-actions">
-          <button disabled>Website</button>
+          <span>
+            <button disabled>Website</button>
+            &nbsp;<i className="fas fa-question-circle text-regular pointer" />
+          </span>
           <a
             href="https://github.com/john-chang94/quick-schedules"
             target="_blank"
@@ -49,10 +50,12 @@ export const Projects = () => {
           >
             <button className="pointer hovered">Github</button>
           </a>
-          <button className="pointer hovered">Watch Demo</button>
+          <button className="pointer hovered">
+            <i className="fas fa-play-circle" /> Demo
+          </button>
         </div>
       </div>
-      <div className="xs12 m5-offset-7 l5-offset-6">
+      <div className="s12 m5-offset-7 l5-offset-6 grid-center">
         <img
           src={quickSchedulesMockup}
           className="project-img qs-mockup"
@@ -64,16 +67,11 @@ export const Projects = () => {
 
   const Monch = () => (
     <div className="project-section grid bg-white">
-      <div className="xs12 m5-offset-1 l5-offset-2 relative">
-        <img
-          src={monchMockup}
-          className="project-img"
-          alt="project monch mockup"
-        />
-      </div>
-      <div className="project-info xs12 l4-offset-7">
+      <div className="project-info s12 m5-offset-1 l4-offset-2">
         <div>
-          <p className="text-subtitle">Monch!</p>
+          <p className="text-subtitle">
+            <strong>Monch!</strong>
+          </p>
           <p className="text-regular">
             Search for restaurants, read reviews, and submit your own!
           </p>
@@ -101,17 +99,28 @@ export const Projects = () => {
           >
             <button className="pointer hovered">Github</button>
           </a>
-          <button className="pointer hovered">Watch Demo</button>
+          <button className="pointer hovered">
+            <i className="fas fa-play-circle" /> Demo
+          </button>
         </div>
+      </div>
+      <div className="s12 m5-offset-7 l5-offset-6 grid-center">
+        <img
+          src={monchMockup}
+          className="project-img monch-mockup"
+          alt="project monch mockup"
+        />
       </div>
     </div>
   );
 
   const CryptoNet = () => (
     <div className="project-section grid bg-white">
-      <div className="project-info xs12 m5-offset-1 l4-offset-2">
+      <div className="project-info s12 m5-offset-1 l4-offset-2">
         <>
-          <p className="text-subtitle">CryptoNet</p>
+          <p className="text-subtitle">
+            <strong>CryptoNet</strong>
+          </p>
           <p className="text-regular">
             Cryptocurrency price tracker. View global market capitalization,
             trading volume, and more. Utilized Coinranking API and Livecoinwatch
@@ -138,10 +147,12 @@ export const Projects = () => {
           >
             <button className="pointer hovered">Github</button>
           </a>
-          <button className="pointer hovered">Watch Demo</button>
+          <button className="pointer hovered">
+            <i className="fas fa-play-circle" /> Demo
+          </button>
         </div>
       </div>
-      <div className="xs12 m5-offset-7 l5-offset-6">
+      <div className="s12 m5-offset-7 l5-offset-6 text-center">
         <img
           src={cryptoNetMockup}
           className="project-img cryptonet-mockup"
