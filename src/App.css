@@ -20,7 +20,7 @@
   height: 100%;
 }
 
-ul {
+nav ul {
   position: fixed;
   list-style-type: none;
   width: 100%;
@@ -31,13 +31,14 @@ ul {
   justify-content: center;
   z-index: 10;
 }
-ul li {
+nav ul li {
   padding: 15px 25px 15px 25px;
 }
-ul li:hover {
+nav ul li:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.1);
 }
+
 #hero {
   text-align: center;
   padding-top: 350px;
@@ -46,6 +47,7 @@ ul li:hover {
 #hero p {
   font-size: calc(10px + 3vmin);
 }
+
 #about {
   text-align: center;
   padding-top: 350px;
@@ -53,9 +55,27 @@ ul li:hover {
 }
 #technologies {
   text-align: center;
-  padding-top: 350px;
-  padding-bottom: 350px;
+  padding: 100px 7% 100px 6%;
 }
+.tech-list {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.tech-list ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.tech-list li {
+  min-width: 100px;
+  margin: 5px 10px 5px 10px;
+}
+.logo-black {
+  max-width: 70px;
+  max-height: 50px;
+}
+
 #projects {
   padding-top: 100px;
 }
@@ -87,11 +107,12 @@ ul li:hover {
 }
 .tech-logos {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 .tech-logos img {
   max-width: 110px;
+  margin: 5px;
 }
 .tech-logos span {
   display: flex;
@@ -144,6 +165,7 @@ ul li:hover {
   opacity: 0;
   transition: opacity 300ms;
 }
+
 #contact {
   text-align: center;
   padding-top: 250px;
