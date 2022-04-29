@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Projects } from "./components/Projects";
@@ -7,22 +7,34 @@ import { Contact } from "./components/Contact";
 import { Technologies } from "./components/Technologies";
 
 function App() {
-  const [location, setLocation] = useState("");
+  const aboutRef = useRef();
+  const technologiesRef = useRef();
+  const projectsRef = useRef();
+  const contactRef = useRef();
 
   return (
     <div className="App">
       <nav>
         <ul>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li onClick={() => aboutRef.current.scrollIntoView({ behavior: "smooth" })}>About</li>
+          <li onClick={() => technologiesRef.current.scrollIntoView({ behavior: "smooth" })}>Technologies</li>
+          <li onClick={() => projectsRef.current.scrollIntoView({ behavior: "smooth" })}>Projects</li>
+          <li onClick={() => contactRef.current.scrollIntoView({ behavior: "smooth" })}>Contact</li>
         </ul>
       </nav>
       <Hero />
-      <About />
-      <Technologies />
-      <Projects />
-      <Contact />
+      <div ref={aboutRef}>
+        <About />
+      </div>
+      <div ref={technologiesRef}>
+        <Technologies />
+      </div>
+      <div ref={projectsRef}>
+        <Projects />
+      </div>
+      <div ref={contactRef}>
+        <Contact />
+      </div>
     </div>
   );
 }

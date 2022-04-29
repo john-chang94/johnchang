@@ -25,9 +25,9 @@ export const Projects = () => {
       <div className="project-info s12 m5-offset-1 l4-offset-2">
         <>
           <p className="text-subtitle">
-            <strong>Quick Schedules</strong>
+            Quick Schedules
           </p>
-          <p className="text-regular">
+          <p>
             Employee management system with exclusive administrative and
             employee privileges.
           </p>
@@ -70,9 +70,9 @@ export const Projects = () => {
       <div className="project-info s12 m5-offset-1 l4-offset-2">
         <div>
           <p className="text-subtitle">
-            <strong>Monch!</strong>
+            Monch!
           </p>
-          <p className="text-regular">
+          <p>
             Search for restaurants, read reviews, and submit your own!
           </p>
         </div>
@@ -119,9 +119,9 @@ export const Projects = () => {
       <div className="project-info s12 m5-offset-1 l4-offset-2">
         <>
           <p className="text-subtitle">
-            <strong>CryptoNet</strong>
+            CryptoNet
           </p>
-          <p className="text-regular">
+          <p>
             Cryptocurrency price tracker. View global market capitalization,
             trading volume, and more. Utilized Coinranking API and Livecoinwatch
             API.

@@ -17,11 +17,11 @@ import postmanLogoBlack from "../images/logo-postman-black.png";
 export const Technologies = () => (
   <section id="technologies">
     <div className="tech-list">
-      <p className="text-regular"><strong>Technologies</strong></p>
+      <p className="text-subtitle">Technologies</p>
       <ul>
         <li>
           <p>HTML/CSS</p>
-          <img className="logo-black" src={htmlLogoBlack} alt="html logo" />
+          <img className="logo-black" src={htmlLogoBlack} alt="html logo" />&nbsp;
           <img className="logo-black" src={cssLogoBlack} alt="css logo" />
         </li>
         <li>
@@ -52,7 +52,7 @@ export const Technologies = () => (
       </ul>
     </div>
     <div className="tech-list">
-      <p className="text-regular"><strong>Utilities</strong></p>
+      <p className="text-subtitle">Utilities</p>
       <ul>
         <li>
           <p>Git</p>
@@ -69,7 +69,7 @@ export const Technologies = () => (
       </ul>
     </div>
     <div className="tech-list">
-      <p className="text-regular"><strong>Exposure</strong></p>
+      <p className="text-subtitle">Exposure</p>
       <ul>
         <li>
           <p>Java</p>

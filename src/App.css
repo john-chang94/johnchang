@@ -12,12 +12,8 @@
   line-height: 1.5;
 }
 
-#root {
-  background: linear-gradient(180deg, rgba(240,243,245,1) 0%, rgba(228,228,228,1) 37%, rgb(202, 213, 232) 100%);
-}
-
 .App {
-  height: 100%;
+  background-color: rgb(237, 241, 245);
 }
 
 nav ul {
@@ -53,13 +49,15 @@ nav ul li:hover {
   padding-top: 350px;
   padding-bottom: 350px;
 }
+
 #technologies {
   text-align: center;
-  padding: 100px 7% 100px 6%;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .tech-list {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .tech-list ul {
   display: flex;
@@ -80,8 +78,8 @@ nav ul li:hover {
   padding-top: 100px;
 }
 .project-section {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 125px;
+  padding-bottom: 125px;
   border-bottom: 1px solid rgb(227, 227, 227);
 }
 .project-info {
@@ -193,15 +191,20 @@ nav ul li:hover {
 }
 .text-title {
   font-size: 2rem;
+  font-family: 'Barlow', sans-serif !important;
 }
 .text-subtitle {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  font-family: 'Barlow', sans-serif !important;
 }
 .text-regular {
   font-size: 1.2rem;
 }
 .text-center {
   text-align: center;
+}
+.text-bold {
+  font-family: bold;
 }
 .grid {
   display: grid;
