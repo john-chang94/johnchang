@@ -29,7 +29,7 @@ export const Projects = () => {
           </p>
           <p>
             Employee management system with exclusive administrative and
-            employee privileges.
+            standard privileges.
           </p>
         </>
         <div className="tech-logos">

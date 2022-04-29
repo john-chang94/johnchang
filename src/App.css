@@ -70,7 +70,7 @@ nav ul li:hover {
   margin: 5px 10px 5px 10px;
 }
 .logo-black {
-  max-width: 70px;
+  max-width: 60px;
   max-height: 50px;
 }
 
@@ -165,9 +165,22 @@ nav ul li:hover {
 }
 
 #contact {
-  text-align: center;
-  padding-top: 250px;
-  padding-bottom: 250px;
+  padding: 125px 15% 125px 15%;
+}
+#contact > p {
+  margin-bottom: 25px;
+}
+.contact-icon-wrapper {
+  min-width: 190px;
+  margin: 10px;
+}
+.contact-icon-wrapper a {
+  text-decoration: none;
+  color: black;
+}
+.contact-icon-wrapper img {
+  max-width: 40px;
+  margin-top: 5px;
 }
 
 
@@ -179,6 +192,12 @@ nav ul li:hover {
 }
 .flex-col {
   flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.justify-evenly {
+  justify-content: space-evenly;
 }
 .pointer {
   cursor: pointer;

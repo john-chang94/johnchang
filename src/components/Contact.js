@@ -1,5 +1,26 @@
+import emailLogoBlack from "../images/logo-email-black.png";
+import linkedInLogoBlack from "../images/logo-linkedin-black.png";
+
 export const Contact = () => (
-    <section id="contact" className="text-regular">
-        contact
-    </section>
-)
+  <section id="contact">
+    <p className="text-center text-regular">Contact</p>
+    <div className="flex flex-wrap justify-evenly">
+      <div className="text-center contact-icon-wrapper">
+        <a href="mailto:changjohn94@gmail.com">
+          <p>changjohn94@gmail.com</p>
+          <img src={emailLogoBlack} alt="email icon" />
+        </a>
+      </div>
+      <div className="text-center contact-icon-wrapper">
+        <a
+          href="https://www.linkedin.com/in/johnjchang94/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <p>Linkedin</p>
+          <img src={linkedInLogoBlack} alt="linkedin icon" />
+        </a>
+      </div>
+    </div>
+  </section>
+);

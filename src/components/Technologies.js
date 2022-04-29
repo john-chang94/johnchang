@@ -13,6 +13,7 @@ import mongoDbLogoBlack from "../images/logo-mongodb-black.png";
 import nodeLogoBlack from "../images/logo-node-black.png";
 import psqlLogoBlack from "../images/logo-postgresql-black.png";
 import postmanLogoBlack from "../images/logo-postman-black.png";
+import reduxLogoBlack from "../images/logo-redux-black.png";
 
 export const Technologies = () => (
   <section id="technologies">
@@ -74,6 +75,10 @@ export const Technologies = () => (
         <li>
           <p>Java</p>
           <img className="logo-black" src={javaLogoBlack} alt="java logo" />
+        </li>
+        <li>
+          <p>Redux.js</p>
+          <img className="logo-black" src={reduxLogoBlack} alt="redux logo" />
         </li>
         <li>
           <p>MongoDB</p>
