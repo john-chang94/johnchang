@@ -38,7 +38,7 @@ export const Projects = () => {
     <div className="project-section bg-white" ref={projectOneSection}>
       <CSSTransition
         in={showProjectOne}
-        timeout={6000}
+        timeout={4500}
         classNames="project-fade"
         unmountOnExit
         nodeRef={projectOneRef}
@@ -95,7 +95,7 @@ export const Projects = () => {
     <div className="project-section bg-white" ref={projectTwoSection}>
       <CSSTransition
         in={showProjectTwo}
-        timeout={6000}
+        timeout={4500}
         classNames="project-fade"
         unmountOnExit
         nodeRef={projectTwoRef}
@@ -150,7 +150,7 @@ export const Projects = () => {
     <div className="project-section bg-white" ref={projectThreeSection}>
       <CSSTransition
         in={showProjectThree}
-        timeout={6000}
+        timeout={4500}
         classNames="project-fade"
         unmountOnExit
         nodeRef={projectThreeRef}
