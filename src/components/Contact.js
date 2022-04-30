@@ -3,7 +3,11 @@ import linkedInLogoBlack from "../images/logo-linkedin-black.png";
 
 export const Contact = () => (
   <section id="contact">
-    <p className="text-center text-regular">Contact</p>
+    <p className="text-center text-regular">
+      Have any questions or comments? That's great!
+      <br />
+      Send me a message and I will get back to you as soon as possible!
+    </p>
     <div className="flex flex-wrap justify-evenly">
       <div className="text-center contact-icon-wrapper">
         <a href="mailto:changjohn94@gmail.com">

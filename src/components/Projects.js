@@ -17,16 +17,20 @@ export const Projects = () => {
   const [showSectionOne, setShowSectionOne] = useState(false);
   const [showSectionTwo, setShowSectionTwo] = useState(false);
   const [showSectionThree, setShowSectionThree] = useState(false);
+  const [info, setInfo] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const modalRef = useRef();
+
+  const handleSetInfo = () => {
+    setInfo(true);
+    setShowModal(true);
+  };
 
   const QuickSchedules = () => (
     <div className="project-section grid bg-white">
       <div className="project-info s12 m5-offset-1 l4-offset-2">
         <>
-          <p className="text-subtitle">
-            Quick Schedules
-          </p>
+          <p className="text-subtitle">Quick Schedules</p>
           <p>
             Employee management system with exclusive administrative and
             standard privileges.
@@ -41,7 +45,11 @@ export const Projects = () => {
         <div className="project-actions">
           <span>
             <button disabled>Website</button>
-            &nbsp;<i className="fas fa-question-circle text-regular pointer" />
+            &nbsp;
+            <i
+              className="fas fa-question-circle text-regular pointer"
+              onClick={handleSetInfo}
+            />
           </span>
           <a
             href="https://github.com/john-chang94/quick-schedules"
@@ -55,7 +63,7 @@ export const Projects = () => {
           </button>
         </div>
       </div>
-      <div className="s12 m5-offset-7 l5-offset-6 grid-center">
+      <div className="s12 m5-offset-7 l5-offset-6">
         <img
           src={quickSchedulesMockup}
           className="project-img qs-mockup"
@@ -69,12 +77,8 @@ export const Projects = () => {
     <div className="project-section grid bg-white">
       <div className="project-info s12 m5-offset-1 l4-offset-2">
         <div>
-          <p className="text-subtitle">
-            Monch!
-          </p>
-          <p>
-            Search for restaurants, read reviews, and submit your own!
-          </p>
+          <p className="text-subtitle">Monch!</p>
+          <p>Search for restaurants, read reviews, and submit your own!</p>
         </div>
         <div className="tech-logos">
           <img src={reactLogo} alt="react logo" />
@@ -104,7 +108,7 @@ export const Projects = () => {
           </button>
         </div>
       </div>
-      <div className="s12 m5-offset-7 l5-offset-6 grid-center">
+      <div className="s12 m5-offset-7 l5-offset-6">
         <img
           src={monchMockup}
           className="project-img monch-mockup"
@@ -118,9 +122,7 @@ export const Projects = () => {
     <div className="project-section grid bg-white">
       <div className="project-info s12 m5-offset-1 l4-offset-2">
         <>
-          <p className="text-subtitle">
-            CryptoNet
-          </p>
+          <p className="text-subtitle">CryptoNet</p>
           <p>
             Cryptocurrency price tracker. View global market capitalization,
             trading volume, and more. Utilized Coinranking API and Livecoinwatch
@@ -166,7 +168,7 @@ export const Projects = () => {
     <CSSTransition
       in={showModal}
       timeout={300}
-      classNames="modal"
+      classNames="modal-fade"
       unmountOnExit
       nodeRef={modalRef}
     >
@@ -179,9 +181,21 @@ export const Projects = () => {
           <div onClick={() => setShowModal(false)}>
             <i className="fas fa-times" />
           </div>
-          <div className="video">
-            <p>data loaded</p>
-          </div>
+          {info ? (
+            <div>
+              <p>
+                Due to the nature of how this app is built (requiring
+                credentials), only the sign-in page is available for viewing.
+                If you are interested in exploring this application,
+                feel free to shoot me a message or take a peek at the demo
+                video!
+              </p>
+            </div>
+          ) : (
+            <div className="video">
+              <p>data loaded</p>
+            </div>
+          )}
         </div>
       </div>
     </CSSTransition>
@@ -203,6 +217,10 @@ export const Projects = () => {
 
   return (
     <section id="projects" className="bg-white">
+      {
+        // CSS transition needs to render like a function
+        Modal()
+      }
       <p className="text-regular text-center">Personal Projects</p>
       <QuickSchedules />
       <Monch />

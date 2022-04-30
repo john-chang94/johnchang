@@ -1,6 +1,5 @@
 import "./App.css";
 import React, { useRef } from "react";
-import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
@@ -22,7 +21,6 @@ function App() {
           <li onClick={() => contactRef.current.scrollIntoView({ behavior: "smooth" })}>Contact</li>
         </ul>
       </nav>
-      <Hero />
       <div ref={aboutRef}>
         <About />
       </div>

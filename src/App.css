@@ -13,7 +13,7 @@
 }
 
 .App {
-  background-color: rgb(237, 241, 245);
+  background-color: rgb(237, 240, 242);
 }
 
 nav ul {
@@ -25,7 +25,6 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
 }
 nav ul li {
   padding: 15px 25px 15px 25px;
@@ -35,19 +34,12 @@ nav ul li:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-#hero {
-  text-align: center;
-  padding-top: 350px;
-  padding-bottom: 350px;
-}
-#hero p {
-  font-size: calc(10px + 3vmin);
-}
-
 #about {
-  text-align: center;
-  padding-top: 350px;
-  padding-bottom: 350px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+#about img {
+  width: 70%;
 }
 
 #technologies {
@@ -97,9 +89,6 @@ nav ul li:hover {
 .project-img {
   width: 100%;
 }
-.monch-mockup {
-  transform: rotate(7deg);
-}
 .cryptonet-mockup {
   width: 80%;
 }
@@ -131,6 +120,7 @@ nav ul li:hover {
 }
 .modal-container {
   position: fixed;
+  z-index: 5;
   top: 0;
   right: 0;
   bottom: 0;
@@ -139,36 +129,55 @@ nav ul li:hover {
 }
 .modal {
   position: absolute;
-  /* margin-top: 1rem; */
+  z-index: 6;
+  margin-top: 1rem;
   left: 0;
   right: 0;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
   width: 50%;
-  padding: 25px 0;
+  padding: 45px 0;
   background-color: rgb(240, 240, 240);
+  border-radius: 10px;
 }
-.modal-enter {
+.modal > div {
+  padding-left: 75px;
+  padding-right: 75px;
+}
+.modal i {
+  font-size: 22px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 10px;
+  margin-top: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+.modal i:hover {
+  color: gray;
+}
+.modal-fade-enter {
   opacity: 0;
 }
-.modal-enter-active {
+.modal-fade-enter-active {
   opacity: 1;
   transition: opacity 300ms;
 }
-.modal-exit {
+.modal-fade-exit {
   opacity: 1;
 }
-.modal-exit-active {
+.modal-fade-exit-active {
   opacity: 0;
   transition: opacity 300ms;
 }
 
 #contact {
-  padding: 125px 15% 125px 15%;
+  padding: 150px 15% 150px 15%;
 }
 #contact > p {
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 .contact-icon-wrapper {
   min-width: 190px;
@@ -196,6 +205,10 @@ nav ul li:hover {
 .flex-wrap {
   flex-wrap: wrap;
 }
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
 .justify-evenly {
   justify-content: space-evenly;
 }
@@ -213,7 +226,7 @@ nav ul li:hover {
   font-family: 'Barlow', sans-serif !important;
 }
 .text-subtitle {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: 'Barlow', sans-serif !important;
 }
 .text-regular {
@@ -232,7 +245,6 @@ nav ul li:hover {
 }
 .grid-center {
   align-self: center;
-  align-content: center;
 }
 .l1 {
   grid-column: span 1;
@@ -302,6 +314,9 @@ nav ul li:hover {
 }
 .l4-offset-2 {
   grid-column: 3 / span 4;
+}
+.l4-offset-6 {
+  grid-column: 7 / span 4;
 }
 .l4-offset-7 {
   grid-column: 8 / span 4;
@@ -392,6 +407,9 @@ nav ul li:hover {
   .m8-offset-2 {
     grid-column: 3 / span 8;
   }
+  #about img {
+    width: 85%;
+  }
   .tech-logos {
     flex-direction: column;
   }
@@ -447,8 +465,14 @@ nav ul li:hover {
   .s4-offset-2 {
     grid-column: 3 / span 4;
   }
+  .s8-offset-2 {
+    grid-column: 3 / span 8;
+  }
   .s10-offset-1 {
     grid-column: 2 / span 10;
+  }
+  .s10-offset-2 {
+    grid-column: 3 / span 10;
   }
   .project-section {
     padding-left: 7%;
