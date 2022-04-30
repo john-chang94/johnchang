@@ -25,6 +25,7 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 nav ul li {
   padding: 15px 25px 15px 25px;
@@ -50,6 +51,8 @@ nav ul li:hover {
 .tech-list {
   margin-top: 50px;
   margin-bottom: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .tech-list ul {
   display: flex;
@@ -58,7 +61,7 @@ nav ul li:hover {
   list-style-type: none;
 }
 .tech-list li {
-  min-width: 100px;
+  min-width: 125px;
   margin: 5px 10px 5px 10px;
 }
 .logo-black {
@@ -118,6 +121,13 @@ nav ul li:hover {
   border: 1px solid rgb(226, 226, 226);
   font-size: 1rem;
 }
+.project-fade-enter {
+  opacity: 0;
+}
+.project-fade-enter-active {
+  opacity: 1;
+  transition: opacity 6000ms;
+}
 .modal-container {
   position: fixed;
   z-index: 5;
@@ -130,7 +140,7 @@ nav ul li:hover {
 .modal {
   position: absolute;
   z-index: 6;
-  margin-top: 1rem;
+  margin-top: 200px;
   left: 0;
   right: 0;
   margin-right: auto;

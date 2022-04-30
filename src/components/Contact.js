@@ -3,7 +3,7 @@ import linkedInLogoBlack from "../images/logo-linkedin-black.png";
 
 export const Contact = () => (
   <section id="contact">
-    <p className="text-center text-regular">
+    <p className="text-center">
       Have any questions or comments? That's great!
       <br />
       Send me a message and I will get back to you as soon as possible!
