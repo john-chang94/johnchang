@@ -19,7 +19,7 @@ function App() {
           className={`${showNav ? "fas fa-times" : "fas fa-bars"}`}
           onClick={() => setShowNav(!showNav)}
         />
-        <ul className={`${!showNav && "nav-hide"}`}>
+        <ul className={`${showNav && "nav-show"}`}>
           <li
             onClick={() =>
               aboutRef.current.scrollIntoView({ behavior: "smooth" })
