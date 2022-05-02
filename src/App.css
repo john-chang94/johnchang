@@ -36,6 +36,8 @@ nav ul {
 }
 nav ul li {
   padding: 15px 25px 15px 25px;
+  background-color: none;
+  transition: background-color 150ms ease-in-out;
 }
 nav ul li:hover {
   cursor: pointer;
@@ -56,7 +58,7 @@ nav ul li:hover {
     justify-content: flex-end;
     background-color: var(--colorSecondary);
     height: 0px;
-    transition: height 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
   }
   nav ul li {
     text-align: center;
@@ -155,12 +157,26 @@ nav ul li:hover {
   border: 1px solid rgb(226, 226, 226);
   font-size: 1rem;
 }
-.project-fade-enter {
+.project-one {
   opacity: 0;
+  transition: opacity 1750ms ease-in;
 }
-.project-fade-enter-active {
+.project-two {
+  opacity: 0;
+  transition: opacity 1750ms ease-in;
+}
+.project-three {
+  opacity: 0;
+  transition: opacity 1750ms ease-in;
+}
+.project-one-open {
   opacity: 1;
-  transition: opacity 4500ms;
+}
+.project-two-open {
+  opacity: 1;
+}
+.project-three-open {
+  opacity: 1;
 }
 .modal-container {
   position: fixed;

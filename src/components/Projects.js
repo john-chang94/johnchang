@@ -14,36 +14,20 @@ import antdLogo from "../images/full-logo-antdesign.png";
 
 export const Projects = () => {
   const [yAxis, setYAxis] = useState(window.scrollY);
-  const [showAbout, setShowAbout] = useState(false);
-  const [showTechnologies, setShowTechnologies] = useState(false);
+  const [wHeight, setWHeight] = useState(window.innerHeight);
   const [showProjectOne, setShowProjectOne] = useState(false);
   const [showProjectTwo, setShowProjectTwo] = useState(false);
   const [showProjectThree, setShowProjectThree] = useState(false);
   const [info, setInfo] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const modalRef = useRef();
-  const projectOneSection = useRef();
-  const projectTwoSection = useRef();
-  const projectThreeSection = useRef();
   const projectOneRef = useRef();
   const projectTwoRef = useRef();
   const projectThreeRef = useRef();
 
-  const handleSetInfo = () => {
-    setInfo(true);
-    setShowModal(true);
-  };
-
   const QuickSchedules = () => (
-    <div className="project-section bg-white" ref={projectOneSection}>
-      <CSSTransition
-        in={showProjectOne}
-        timeout={4500}
-        classNames="project-fade"
-        unmountOnExit
-        nodeRef={projectOneRef}
-      >
-        <div className="grid block" ref={projectOneRef}>
+    <div className="project-section bg-white">
+        <div className={`grid project-one ${showProjectOne && "project-one-open"}`} ref={projectOneRef}>
           <div className="project-info s12 m5-offset-1 l4-offset-2">
             <>
               <p className="text-subtitle">Quick Schedules</p>
@@ -87,20 +71,12 @@ export const Projects = () => {
             />
           </div>
         </div>
-      </CSSTransition>
     </div>
   );
 
   const Monch = () => (
-    <div className="project-section bg-white" ref={projectTwoSection}>
-      <CSSTransition
-        in={showProjectTwo}
-        timeout={4500}
-        classNames="project-fade"
-        unmountOnExit
-        nodeRef={projectTwoRef}
-      >
-        <div className="grid" ref={projectTwoRef}>
+    <div className="project-section bg-white">
+        <div className={`grid project-two ${showProjectTwo && "project-one-open"}`} ref={projectTwoRef}>
           <div className="project-info s12 m5-offset-1 l4-offset-2">
             <div>
               <p className="text-subtitle">Monch!</p>
@@ -142,20 +118,12 @@ export const Projects = () => {
             />
           </div>
         </div>
-      </CSSTransition>
     </div>
   );
 
   const CryptoNet = () => (
-    <div className="project-section bg-white" ref={projectThreeSection}>
-      <CSSTransition
-        in={showProjectThree}
-        timeout={4500}
-        classNames="project-fade"
-        unmountOnExit
-        nodeRef={projectThreeRef}
-      >
-        <div className="grid" ref={projectThreeRef}>
+    <div className="project-section bg-white">
+        <div className={`grid project-three ${showProjectThree && "project-three-open"}`} ref={projectThreeRef}>
           <div className="project-info s12 m5-offset-1 l4-offset-2">
             <>
               <p className="text-subtitle">CryptoNet</p>
@@ -198,7 +166,6 @@ export const Projects = () => {
             />
           </div>
         </div>
-      </CSSTransition>
     </div>
   );
 
@@ -238,25 +205,37 @@ export const Projects = () => {
     </CSSTransition>
   );
 
-  const handleSetYAxis = () => {
-    setYAxis(window.scrollY);
+  // Set info for modal
+  const handleSetInfo = () => {
+    setInfo(true);
+    setShowModal(true);
   };
 
+  const handleSetYAxis = () => setYAxis(window.scrollY);
+  const handleSetHeight = () => setWHeight(window.innerHeight);
+  
+  // Set scrollY and window height to keep track for project fade in
   useEffect(() => {
     window.addEventListener("scroll", handleSetYAxis);
+    window.addEventListener("resize", handleSetHeight);
 
-    return () => window.removeEventListener("scroll", handleSetYAxis);
+    return () => {
+      window.removeEventListener("scroll", handleSetYAxis);
+      window.removeEventListener("resize", handleSetHeight);
+    }
   }, []);
 
   useEffect(() => {
-    // Render if 25% of component is scrolled into view
-    // NOTE - had to create a ref in parent div (section refs) for children 
-    // that are meant to fade in in order to compare scroll height, otherwise
-    // original project refs are undefined and cannot access offsetTop
-    if ((yAxis / projectOneSection.current.offsetTop) > 0.75) setShowProjectOne(true);
-    if ((yAxis / projectTwoSection.current.offsetTop) > 0.75) setShowProjectTwo(true);
-    if ((yAxis / projectThreeSection.current.offsetTop) > 0.75) setShowProjectThree(true);
-  }, [yAxis]);
+    // Render each project if component is scrolled into view
+    // scrollY keeps track of scroll position from top of page (starting 0)
+    // offsetTop is the distance from top of page
+    // Therefore, (current scrollY + window height) >= component's offsetTop
+    // means that the component has been scrolled into view from the bottom
+    if ((yAxis + wHeight) >= projectOneRef.current.offsetTop) setShowProjectOne(true);
+    if ((yAxis + wHeight) >= projectTwoRef.current.offsetTop) setShowProjectTwo(true);
+    if ((yAxis + wHeight) >= projectThreeRef.current.offsetTop) setShowProjectThree(true);
+
+  }, [yAxis, wHeight]);
 
   return (
     <section id="projects" className="bg-white">
