@@ -17,17 +17,20 @@ import reduxLogoBlack from "../images/logo-redux-black.png";
 
 export const Technologies = () => (
   <section id="technologies">
+    <p className="text-regular">Technologies</p>
     <div className="tech-list">
-      <p className="text-subtitle">Technologies</p>
+      <p className="text-subtitle">Main</p>
       <ul>
         <li>
           <p>HTML/CSS</p>
-          <img className="logo-black" src={htmlLogoBlack} alt="html logo" />&nbsp;
+          <img className="logo-black" src={htmlLogoBlack} alt="html logo" />
+          &nbsp;
           <img className="logo-black" src={cssLogoBlack} alt="css logo" />
         </li>
         <li>
           <p>Javascript/ES6</p>
-          <img className="logo-black" src={jsLogoBlack} alt="javascript logo" />&nbsp;
+          <img className="logo-black" src={jsLogoBlack} alt="javascript logo" />
+          &nbsp;
           <img className="logo-black" src={es6LogoBlack} alt="es6 logo" />
         </li>
         <li>
@@ -40,21 +43,28 @@ export const Technologies = () => (
         </li>
         <li>
           <p>Express.js</p>
-          <img className="logo-black" src={expressLogoBlack} alt="express logo" />
+          <img
+            className="logo-black"
+            src={expressLogoBlack}
+            alt="express logo"
+          />
         </li>
         <li>
           <p>PostgreSQL</p>
-          <img className="logo-black" src={psqlLogoBlack} alt="postgresql logo" />
+          <img
+            className="logo-black"
+            src={psqlLogoBlack}
+            alt="postgresql logo"
+          />
         </li>
         <li>
           <p>Firebase</p>
-          <img className="logo-black" src={firebaseLogoBlack} alt="firebase logo" />
+          <img
+            className="logo-black"
+            src={firebaseLogoBlack}
+            alt="firebase logo"
+          />
         </li>
-      </ul>
-    </div>
-    <div className="tech-list">
-      <p className="text-subtitle">Utilities</p>
-      <ul>
         <li>
           <p>Git</p>
           <img className="logo-black" src={gitLogoBlack} alt="git logo" />
@@ -65,7 +75,11 @@ export const Technologies = () => (
         </li>
         <li>
           <p>Postman</p>
-          <img className="logo-black" src={postmanLogoBlack} alt="postman logo" />
+          <img
+            className="logo-black"
+            src={postmanLogoBlack}
+            alt="postman logo"
+          />
         </li>
       </ul>
     </div>
@@ -82,11 +96,19 @@ export const Technologies = () => (
         </li>
         <li>
           <p>MongoDB</p>
-          <img className="logo-black" src={mongoDbLogoBlack} alt="mongo db logo" />
+          <img
+            className="logo-black"
+            src={mongoDbLogoBlack}
+            alt="mongo db logo"
+          />
         </li>
         <li>
           <p>Amazon S3</p>
-          <img className="logo-black" src={awsS3LogoBlack} alt="amazon s3 logo" />
+          <img
+            className="logo-black"
+            src={awsS3LogoBlack}
+            alt="amazon s3 logo"
+          />
         </li>
       </ul>
     </div>
