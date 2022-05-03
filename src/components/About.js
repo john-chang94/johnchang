@@ -7,7 +7,7 @@ export const About = () => (
       <p>
         I am a full stack developer who loves bringing ideas to life. I always
         look forward to enhancing my skills through current and future projects,
-        no matter how small, because any improvement is still an accomplishment.
+        no matter how small or large, because any improvement is still an accomplishment.
         On my free time (besides going out with friends), I enjoy looking into
         astronomy, finance, tech reviews, and if I'm feeling a bit more
         adventurous, then snippets of cybersecurity.

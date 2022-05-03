@@ -12,6 +12,10 @@ function App() {
   const projectsRef = useRef();
   const contactRef = useRef();
 
+  const handleNavClick = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+    setShowNav(false);
+  };
 
   return (
     <div className="App">
@@ -21,34 +25,10 @@ function App() {
           onClick={() => setShowNav(!showNav)}
         />
         <ul className={`${showNav && "nav-show"}`}>
-          <li
-            onClick={() =>
-              aboutRef.current.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            About
-          </li>
-          <li
-            onClick={() =>
-              technologiesRef.current.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Technologies
-          </li>
-          <li
-            onClick={() =>
-              projectsRef.current.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Projects
-          </li>
-          <li
-            onClick={() =>
-              contactRef.current.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Contact
-          </li>
+          <li onClick={() => handleNavClick(aboutRef)}>About</li>
+          <li onClick={() => handleNavClick(technologiesRef)}>Technologies</li>
+          <li onClick={() => handleNavClick(projectsRef)}>Projects</li>
+          <li onClick={() => handleNavClick(contactRef)}>Contact</li>
         </ul>
       </nav>
       <div ref={aboutRef}>
