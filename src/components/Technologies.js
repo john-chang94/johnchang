@@ -19,7 +19,7 @@ export const Technologies = () => (
   <section id="technologies">
     <p className="text-regular">Technologies</p>
     <div className="tech-list">
-      <p className="text-subtitle">Main</p>
+      <p className="text-regular">Main</p>
       <ul>
         <li>
           <p>HTML/CSS</p>
@@ -84,7 +84,7 @@ export const Technologies = () => (
       </ul>
     </div>
     <div className="tech-list">
-      <p className="text-subtitle">Exposure</p>
+      <p className="text-regular">Exposure</p>
       <ul>
         <li>
           <p>Java</p>

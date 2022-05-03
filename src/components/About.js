@@ -4,12 +4,13 @@ export const About = () => (
   <section id="about" className="bg-white grid">
     <div className="xs10-offset-1 s8-offset-2 l4-offset-2 text-center grid-center">
       <p className="text-title">John Chang</p>
-      <p className="text-title">Software Developer</p>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam sequi
-        quasi dolore quo, a placeat sit voluptatem consequuntur, tenetur at in
-        voluptatum eum molestias architecto perspiciatis reiciendis! Cupiditate,
-        nam voluptate?
+        I am a full stack developer who loves bringing ideas to life. I always
+        look forward to enhancing my skills through current and future projects,
+        no matter how small, because any improvement is still an accomplishment.
+        On my free time (besides going out with friends), I enjoy looking into
+        astronomy, finance, tech reviews, and if I'm feeling a bit more
+        adventurous, then snippets of cybersecurity.
       </p>
     </div>
     <div className="xs10-offset-1 s8-offset-2 l4-offset-6 flex flex-center">

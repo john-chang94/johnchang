@@ -45,18 +45,6 @@ nav ul li:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.1);
 }
-.nav-offset {
-  background-color: rgba(0, 0, 0, 0);
-}
-.ul-offset {
-  color: var(--colorSecondary);
-}
-.nav-offset:hover {
-  background-color: var(--colorSecondary);
-}
-.ul-offset:hover {
-  color: var(--colorText);
-}
 
 @media (max-width: 550px) {
   nav i {
@@ -86,8 +74,12 @@ nav ul li:hover {
 }
 
 #about {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 175px;
+  padding-bottom: 175px;
+}
+#about div {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 #about img {
   width: 65%;
