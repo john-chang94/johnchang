@@ -1,5 +1,6 @@
 import emailLogoBlack from "../images/logo-email-black.png";
 import linkedInLogoBlack from "../images/logo-linkedin-black.png";
+import githubLogoBlack from "../images/logo-github-black.png";
 
 export const Contact = () => (
   <section id="contact">
@@ -23,6 +24,16 @@ export const Contact = () => (
         >
           <p>Linkedin</p>
           <img src={linkedInLogoBlack} alt="linkedin icon" />
+        </a>
+      </div>
+      <div className="text-center contact-icon-wrapper">
+        <a
+          href="https://github.com/john-chang94"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <p>Github</p>
+          <img src={githubLogoBlack} alt="github icon" />
         </a>
       </div>
     </div>
