@@ -129,8 +129,8 @@ export const Projects = () => {
               <p className="text-subtitle">CryptoNet</p>
               <p>
                 Cryptocurrency price tracker. View global market capitalization,
-                trading volume, and more. Utilized Coinranking API and
-                Livecoinwatch API.
+                trading volume, and more. Utilized Live Coin Watch API and
+                NewsCatcher API.
               </p>
             </>
             <div className="tech-logos">
