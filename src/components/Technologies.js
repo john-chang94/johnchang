@@ -1,5 +1,4 @@
 import reactLogoBlack from "../images/logo-react-black.png";
-import awsS3LogoBlack from "../images/logo-aws-s3-black.png";
 import cssLogoBlack from "../images/logo-css-black.png";
 import expressLogoBlack from "../images/logo-express-black2.png";
 import firebaseLogoBlack from "../images/logo-firebase-black.png";
@@ -100,14 +99,6 @@ export const Technologies = () => (
             className="logo-black"
             src={mongoDbLogoBlack}
             alt="mongo db logo"
-          />
-        </li>
-        <li>
-          <p>Amazon S3</p>
-          <img
-            className="logo-black"
-            src={awsS3LogoBlack}
-            alt="amazon s3 logo"
           />
         </li>
       </ul>

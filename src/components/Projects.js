@@ -11,6 +11,7 @@ import postgresLogo from "../images/full-logo-postgresql.png";
 import firebaseLogo from "../images/full-logo-firebase.png";
 import chartLogo from "../images/full-logo-chartjs.png";
 import antdLogo from "../images/full-logo-antdesign.png";
+import reactQueryLogo from "../images/full-logo-react-query.png";
 import ReactPlayer from "react-player";
 
 export const Projects = () => {
@@ -115,7 +116,9 @@ export const Projects = () => {
             </a>
             <button
               className="pointer hovered"
-              onClick={() => handleShowModal(false, 2, "")}
+              onClick={() =>
+                handleShowModal(false, 2, "https://youtu.be/MU5CRHsBVUA")
+              }
             >
               <i className="fas fa-play-circle" /> Demo
             </button>
@@ -154,6 +157,7 @@ export const Projects = () => {
             <img src={reactLogo} alt="react logo" />
             <img src={antdLogo} alt="ant design logo" />
             <img src={chartLogo} alt="chart js logo" />
+            <img src={reactQueryLogo} alt="react query logo" />
           </div>
           <div className="project-actions">
             <a
@@ -172,7 +176,9 @@ export const Projects = () => {
             </a>
             <button
               className="pointer hovered"
-              onClick={() => handleShowModal(false, 3, "")}
+              onClick={() =>
+                handleShowModal(false, 3, "https://youtu.be/oJGa4jXiwGo")
+              }
             >
               <i className="fas fa-play-circle" /> Demo
             </button>
@@ -211,13 +217,12 @@ export const Projects = () => {
             <br />
             {isInfo && (
               <p>
-                <strong>Disclaimer!</strong> After several retakes for the
-                recording, I came to realize that trying to go over all of the
+                <strong>Disclaimer!</strong> After several retakes of the
+                recording, I came to realize that trying to showcase all of the
                 features would take quite some time as there are two separate
                 portals to navigate through with their own little details.
-                Therefore, I'll showcase the main features as swiftly as I can!
+                Therefore, I'll go over the main features as swiftly as I can!
                 <br />
-                <strong>*Full screen recommended for better quality</strong>
               </p>
             )}
           </div>

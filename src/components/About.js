@@ -1,4 +1,4 @@
-import John from "../images/john-round.png";
+import John from "../images/john.png";
 
 export const About = () => (
   <section id="about" className="bg-white grid">
@@ -9,7 +9,7 @@ export const About = () => (
         look forward to enhancing my skills through current and future projects,
         no matter how small or large, because any improvement is still an accomplishment.
         Besides going out with friends, I also enjoy looking into astronomy, finance,
-        tech reviews, and if I'm feeling a bit more adventurous, some horror gameplay videos.
+        tech reviews, and on occasion some horror gameplay videos.
       </p>
     </div>
     <div className="xs10-offset-1 s8-offset-2 l4-offset-6 flex flex-center">
