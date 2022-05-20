@@ -217,7 +217,7 @@ export const Projects = () => {
             <br />
             {isInfo && (
               <p>
-                <strong>Disclaimer!</strong> After several retakes of the
+                <strong>Note!</strong> After several retakes of the
                 recording, I came to realize that trying to showcase all of the
                 features would take quite some time as there are two separate
                 portals to navigate through with their own little details.

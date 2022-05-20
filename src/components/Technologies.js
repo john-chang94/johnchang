@@ -101,6 +101,14 @@ export const Technologies = () => (
             alt="mongo db logo"
           />
         </li>
+        <li>
+          <p>React Native</p>
+          <img
+            className="logo-black"
+            src={reactLogoBlack}
+            alt="react native logo"
+          />
+        </li>
       </ul>
     </div>
   </section>
