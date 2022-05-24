@@ -14,11 +14,12 @@ import psqlLogoBlack from "../images/logo-postgresql-black.png";
 import postmanLogoBlack from "../images/logo-postman-black.png";
 import reduxLogoBlack from "../images/logo-redux-black.png";
 
-export const Technologies = () => (
-  <section id="technologies">
+export const Technologies = ({ technologiesRef }) => (
+  <section id="technologies" ref={technologiesRef}>
     <p className="text-regular">Technologies</p>
     <div className="tech-list">
       <p className="text-regular">Main</p>
+      <hr style={{ maxWidth: "50px", margin: "auto" }} />
       <ul>
         <li>
           <p>HTML/CSS</p>
@@ -84,6 +85,7 @@ export const Technologies = () => (
     </div>
     <div className="tech-list">
       <p className="text-regular">Exposure</p>
+      <hr style={{ maxWidth: "100px", margin: "auto" }} />
       <ul>
         <li>
           <p>Java</p>

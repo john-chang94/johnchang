@@ -14,7 +14,7 @@ import antdLogo from "../images/full-logo-antdesign.png";
 import reactQueryLogo from "../images/full-logo-react-query.png";
 import ReactPlayer from "react-player";
 
-export const Projects = () => {
+export const Projects = ({ projectsRef }) => {
   const [yAxis, setYAxis] = useState(window.scrollY);
   const [wHeight, setWHeight] = useState(window.innerHeight);
   const [showProjectOne, setShowProjectOne] = useState(false);
@@ -30,7 +30,7 @@ export const Projects = () => {
   const projectThreeRef = useRef();
 
   const QuickSchedules = () => (
-    <div className="project-section bg-white">
+    <div className="project-section bg-white" ref={projectsRef}>
       {video === 1 && Modal()}
       <div
         className={`grid project-one ${showProjectOne && "project-one-open"}`}

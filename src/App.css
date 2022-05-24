@@ -107,6 +107,7 @@ nav ul li:hover {
   justify-content: center;
   flex-wrap: wrap;
   list-style-type: none;
+  margin-top: 7px;
 }
 .tech-list li {
   min-width: 125px;

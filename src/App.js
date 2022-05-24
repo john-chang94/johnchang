@@ -31,18 +31,10 @@ function App() {
           <li onClick={() => handleNavClick(contactRef)}>Contact</li>
         </ul>
       </nav>
-      <div ref={aboutRef}>
-        <About />
-      </div>
-      <div ref={technologiesRef}>
-        <Technologies />
-      </div>
-      <div ref={projectsRef}>
-        <Projects />
-      </div>
-      <div ref={contactRef}>
-        <Contact />
-      </div>
+        <About aboutRef={aboutRef} />
+        <Technologies technologiesRef={technologiesRef} />
+        <Projects projectsRef={projectsRef} />
+        <Contact contactRef={contactRef} />
     </div>
   );
 }

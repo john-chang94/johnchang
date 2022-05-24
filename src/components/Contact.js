@@ -2,8 +2,8 @@ import emailLogoBlack from "../images/logo-email-black.png";
 import linkedInLogoBlack from "../images/logo-linkedin-black.png";
 import githubLogoBlack from "../images/logo-github-black.png";
 
-export const Contact = () => (
-  <section id="contact">
+export const Contact = ({ contactRef }) => (
+  <section id="contact" ref={contactRef}>
     <p className="text-center">
       Have any questions or comments? That's great!
       <br />
