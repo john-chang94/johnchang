@@ -17,101 +17,79 @@ import reduxLogoBlack from "../images/logo-redux-black.png";
 export const Technologies = ({ technologiesRef }) => (
   <section id="technologies" ref={technologiesRef}>
     <p className="text-regular">Technologies</p>
-    <div className="tech-list">
-      <p className="text-regular">Main</p>
-      <hr style={{ maxWidth: "50px", margin: "auto" }} />
-      <ul>
-        <li>
-          <p>HTML/CSS</p>
-          <img className="logo-black" src={htmlLogoBlack} alt="html logo" />
-          &nbsp;
-          <img className="logo-black" src={cssLogoBlack} alt="css logo" />
-        </li>
-        <li>
-          <p>Javascript/ES6</p>
-          <img className="logo-black" src={jsLogoBlack} alt="javascript logo" />
-          &nbsp;
-          <img className="logo-black" src={es6LogoBlack} alt="es6 logo" />
-        </li>
-        <li>
-          <p>React.js</p>
-          <img className="logo-black" src={reactLogoBlack} alt="react logo" />
-        </li>
-        <li>
-          <p>Node.js</p>
-          <img className="logo-black" src={nodeLogoBlack} alt="node logo" />
-        </li>
-        <li>
-          <p>Express.js</p>
-          <img
-            className="logo-black"
-            src={expressLogoBlack}
-            alt="express logo"
-          />
-        </li>
-        <li>
-          <p>PostgreSQL</p>
-          <img
-            className="logo-black"
-            src={psqlLogoBlack}
-            alt="postgresql logo"
-          />
-        </li>
-        <li>
-          <p>Firebase</p>
-          <img
-            className="logo-black"
-            src={firebaseLogoBlack}
-            alt="firebase logo"
-          />
-        </li>
-        <li>
-          <p>Git</p>
-          <img className="logo-black" src={gitLogoBlack} alt="git logo" />
-        </li>
-        <li>
-          <p>Github</p>
-          <img className="logo-black" src={githubLogoBlack} alt="github logo" />
-        </li>
-        <li>
-          <p>Postman</p>
-          <img
-            className="logo-black"
-            src={postmanLogoBlack}
-            alt="postman logo"
-          />
-        </li>
-      </ul>
-    </div>
-    <div className="tech-list">
-      <p className="text-regular">Exposure</p>
-      <hr style={{ maxWidth: "100px", margin: "auto" }} />
-      <ul>
-        <li>
-          <p>Java</p>
-          <img className="logo-black" src={javaLogoBlack} alt="java logo" />
-        </li>
-        <li>
-          <p>Redux.js</p>
-          <img className="logo-black" src={reduxLogoBlack} alt="redux logo" />
-        </li>
-        <li>
-          <p>MongoDB</p>
-          <img
-            className="logo-black"
-            src={mongoDbLogoBlack}
-            alt="mongo db logo"
-          />
-        </li>
-        <li>
-          <p>React Native</p>
-          <img
-            className="logo-black"
-            src={reactLogoBlack}
-            alt="react native logo"
-          />
-        </li>
-      </ul>
-    </div>
+    <ul className="tech-list">
+      <li>
+        <p>HTML/CSS</p>
+        <img className="logo-black" src={htmlLogoBlack} alt="html logo" />
+        &nbsp;
+        <img className="logo-black" src={cssLogoBlack} alt="css logo" />
+      </li>
+      <li>
+        <p>Javascript/ES6</p>
+        <img className="logo-black" src={jsLogoBlack} alt="javascript logo" />
+        &nbsp;
+        <img className="logo-black" src={es6LogoBlack} alt="es6 logo" />
+      </li>
+      <li>
+        <p>React.js</p>
+        <img className="logo-black" src={reactLogoBlack} alt="react logo" />
+      </li>
+      <li>
+        <p>Node.js</p>
+        <img className="logo-black" src={nodeLogoBlack} alt="node logo" />
+      </li>
+      <li>
+        <p>Express.js</p>
+        <img className="logo-black" src={expressLogoBlack} alt="express logo" />
+      </li>
+      <li>
+        <p>Redux.js</p>
+        <img className="logo-black" src={reduxLogoBlack} alt="redux logo" />
+      </li>
+      <li>
+        <p>React Native</p>
+        <img
+          className="logo-black"
+          src={reactLogoBlack}
+          alt="react native logo"
+        />
+      </li>
+      <li>
+        <p>Java</p>
+        <img className="logo-black" src={javaLogoBlack} alt="java logo" />
+      </li>
+      <li>
+        <p>PostgreSQL</p>
+        <img className="logo-black" src={psqlLogoBlack} alt="postgresql logo" />
+      </li>
+      <li>
+        <p>Firebase</p>
+        <img
+          className="logo-black"
+          src={firebaseLogoBlack}
+          alt="firebase logo"
+        />
+      </li>
+      <li>
+        <p>MongoDB</p>
+        <img
+          className="logo-black"
+          src={mongoDbLogoBlack}
+          alt="mongo db logo"
+        />
+      </li>
+      <li>
+        <p>Git</p>
+        <img className="logo-black" src={gitLogoBlack} alt="git logo" />
+      </li>
+      <li>
+        <p>Github</p>
+        <img className="logo-black" src={githubLogoBlack} alt="github logo" />
+      </li>
+      <li>
+        <p>Postman</p>
+        <img className="logo-black" src={postmanLogoBlack} alt="postman logo" />
+      </li>
+    </ul>
   </section>
 );

@@ -98,20 +98,17 @@ nav ul li:hover {
   align-items: center;
 }
 .tech-list {
-  margin-top: 65px;
-  margin-bottom: 65px;
-  max-width: 800px;
-}
-.tech-list ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   list-style-type: none;
-  margin-top: 7px;
+  margin-top: 65px;
+  margin-bottom: 65px;
+  max-width: 800px;
 }
 .tech-list li {
   min-width: 125px;
-  margin: 5px 10px 5px 10px;
+  margin: 10px 15px 10px 15px;
 }
 .logo-black {
   max-width: 60px;
