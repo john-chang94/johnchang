@@ -269,7 +269,7 @@ export const Projects = ({ projectsRef }) => {
 
   return (
     <section id="projects" className="bg-white">
-      <p className="text-regular text-center">Personal Projects</p>
+      <p className="text-regular text-center">Projects</p>
       {QuickSchedules()}
       {Monch()}
       {CryptoNet()}

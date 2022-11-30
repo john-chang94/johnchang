@@ -9,7 +9,7 @@ export const About = ({ aboutRef }) => (
         look forward to enhancing my skills through current and future projects,
         no matter how small or large, because any improvement is still an accomplishment.
         Besides going out with friends, I also enjoy astronomy, finance,
-        tech reviews, and occasionally getting some good laughs from horror gameplay videos.
+        tech reviews, and occasionally getting some good laughs from online gameplay videos.
       </p>
     </div>
     <div className="xs10-offset-1 s8-offset-2 l4-offset-6 flex flex-center">
