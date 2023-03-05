@@ -44,7 +44,7 @@ function App() {
       </div>
       <Routes>
         <Route
-          path="/"
+          exact path="/"
           element={
             <Sections
               aboutRef={aboutRef}
