@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React, { useRef, useState } from "react";
 import { About } from "./components/About";
 import { Projects } from "./components/Projects";
@@ -7,6 +7,9 @@ import { Contact } from "./components/Contact";
 import { Technologies } from "./components/Technologies";
 import Sections from "./components/Sections";
 import { OneBook } from "./components/OneBook";
+import { OpenDev } from "./components/OpenDev";
+import { OpenScheme } from "./components/OpenScheme";
+import { PrivacyPolicy } from "./components/PrivacyPolicy";
 
 function App() {
   const [showNav, setShowNav] = useState(false);
@@ -44,7 +47,8 @@ function App() {
       </div>
       <Routes>
         <Route
-          exact path="/"
+          exact
+          path="/"
           element={
             <Sections
               aboutRef={aboutRef}
@@ -54,8 +58,12 @@ function App() {
             />
           }
         />
-        <Route path="/onebook" element={<OneBook />} />
+        <Route path="/pros" element={<OneBook />} />
+        <Route path="/ProDetails" element={<OpenDev />} />
+        <Route path="/ProDetails" element={<OpenScheme />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
+      <Link to="/pros">OB</Link>
     </Router>
   );
 }
