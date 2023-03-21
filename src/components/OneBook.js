@@ -63,13 +63,13 @@ export const OneBook = (props) => {
   useEffect(() => {
     mounted.current = true;
 
-    // setTimeout(() => {
+    setTimeout(() => {
     //   if (mounted.current === true) {
         window.location.replace(
           `onebook://johnchang.me/ProDetails?proId=${proId}`
         );
     //   }
-    // }, 500);
+    }, 500);
     
     setTimeout(() => {
       window.location.replace(
