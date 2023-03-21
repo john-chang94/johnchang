@@ -47,7 +47,6 @@ function App() {
       </div>
       <Routes>
         <Route
-          exact
           path="/"
           element={
             <Sections
