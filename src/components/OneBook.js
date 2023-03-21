@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import MobileDetect from "mobile-detect";
 
-export const OneBook = () => {
+export const OneBook = (props) => {
   const [url, setUrl] = useState(
     "onebook://johnchang.me/proDetails?proId=1NdudyrUJmGOjDWyxUsz"
   );
@@ -15,6 +15,8 @@ export const OneBook = () => {
   );
 
   console.log(md.os());
+
+  const { proId } = useParams();
 
   const navigate = useNavigate();
 
@@ -61,23 +63,24 @@ export const OneBook = () => {
   useEffect(() => {
     mounted.current = true;
 
-    window.location.replace(
-      "onebook://johnchang.me/ProDetails?proId=1NdudyrUJmGOjDWyxUsz"
-    );
-
-    console.log(mounted.current)
     // setTimeout(() => {
-      // if (mounted.current === true) {
+    //   if (mounted.current === true) {
         window.location.replace(
-          "https://onelink.to/onebook"
+          `onebook://johnchang.me/ProDetails?proId=${proId}`
         );
-      // }
-    // }, 2000);
+    //   }
+    // }, 500);
+    
+    setTimeout(() => {
+      window.location.replace(
+        "https://onelink.to/onebook"
+      );
+    }, 1000);
 
     return () => {
       mounted.current = false;
     };
-  }, []);
+  }, [proId]);
 
   return (
     <div className="h-100 flex flex-center flex-col">

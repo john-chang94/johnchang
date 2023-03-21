@@ -58,6 +58,7 @@ function App() {
             />
           }
         />
+        <Route path="/pros/:proId" element={<OneBook />} />
         <Route path="/pros" element={<OneBook />} />
         <Route path="/ProDetails" element={<OpenDev />} />
         <Route path="/ProDetails" element={<OpenScheme />} />
