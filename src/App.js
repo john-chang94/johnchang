@@ -63,7 +63,7 @@ function App() {
         <Route path="/ProDetails" element={<OpenScheme />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
-      <Link to="/pros">OB</Link>
+      {/* <Link to="/pros">OB</Link> */}
     </Router>
   );
 }

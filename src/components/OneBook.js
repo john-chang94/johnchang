@@ -69,13 +69,13 @@ export const OneBook = (props) => {
           `onebook://johnchang.me/ProDetails?proId=${proId}`
         );
     //   }
-    }, 500);
+    }, 10);
     
     setTimeout(() => {
       window.location.replace(
         "https://onelink.to/onebook"
       );
-    }, 1000);
+    }, 4000);
 
     return () => {
       mounted.current = false;
